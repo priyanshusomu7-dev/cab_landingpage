@@ -1,26 +1,134 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light !important;
+  --background: #f0f4f8; /* Soft off-white/grey */
+  --foreground: #1e293b; /* Dark charcoal */
+  --primary: #f59e0b; /* Deep yellow / warm orange */
+  --primary-hover: #fbbf24;
+  --secondary: #1e293b; 
+  --accent: #38bdf8; /* Light blue accent */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
 }
 
 body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Claymorphism Utility Classes */
+.clay-card {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 24px;
+  box-shadow: 
+    12px 12px 24px rgba(166, 180, 200, 0.4),
+    -12px -12px 24px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 6px rgba(255, 255, 255, 1),
+    inset -2px -2px 6px rgba(166, 180, 200, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clay-card:hover {
+  box-shadow: 
+    16px 16px 32px rgba(166, 180, 200, 0.45),
+    -16px -16px 32px rgba(255, 255, 255, 1),
+    inset 2px 2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 8px rgba(166, 180, 200, 0.15);
+  transform: translateY(-4px);
+}
+
+.clay-btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 
+    6px 6px 12px rgba(245, 158, 11, 0.3),
+    -6px -6px 12px rgba(255, 255, 255, 0.7),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.clay-btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 
+    8px 8px 16px rgba(245, 158, 11, 0.35),
+    -8px -8px 16px rgba(255, 255, 255, 0.8),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.clay-btn-secondary {
+  background: var(--background);
+  color: var(--secondary);
+  border-radius: 16px;
+  box-shadow: 
+    6px 6px 12px rgba(166, 180, 200, 0.4),
+    -6px -6px 12px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 5px rgba(255, 255, 255, 1),
+    inset -2px -2px 5px rgba(166, 180, 200, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.clay-btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    8px 8px 16px rgba(166, 180, 200, 0.5),
+    -8px -8px 16px rgba(255, 255, 255, 1),
+    inset 2px 2px 5px rgba(255, 255, 255, 1),
+    inset -2px -2px 5px rgba(166, 180, 200, 0.15);
+}
+
+.clay-pill {
+  background: var(--background);
+  border-radius: 9999px;
+  box-shadow: 
+    4px 4px 8px rgba(166, 180, 200, 0.4),
+    -4px -4px 8px rgba(255, 255, 255, 0.9),
+    inset 1px 1px 3px rgba(255, 255, 255, 1),
+    inset -1px -1px 3px rgba(166, 180, 200, 0.2);
+}
+
+.clay-icon-primary {
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  box-shadow: 
+    4px 4px 10px rgba(245, 158, 11, 0.3),
+    -4px -4px 10px rgba(255, 255, 255, 0.7),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clay-icon-secondary {
+  background: var(--background);
+  color: var(--primary);
+  border-radius: 50%;
+  box-shadow: 
+    4px 4px 10px rgba(166, 180, 200, 0.4),
+    -4px -4px 10px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 4px rgba(255, 255, 255, 1),
+    inset -2px -2px 4px rgba(166, 180, 200, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific section backgrounds based on clay */
+.bg-clay-darker {
+  background: #e2e8f0;
 }
