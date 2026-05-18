@@ -49,9 +49,9 @@ export default function Home() {
               <span>#1 Cab Service in Bhopal</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-[var(--secondary)]">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-[var(--secondary)]">
               Your City, <br />
-              <span className="text-[var(--primary)]">Your Ride,</span> <br />
+              <span className="text-[var(--primary)] font-extrabold">Your Ride,</span> <br />
               Right Now.
             </h1>
 
@@ -93,7 +93,7 @@ export default function Home() {
       {/* Features Section */}
       <section id="features" className="py-24 px-6 max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl form-bold font-extrabold text-[var(--secondary)] mb-4">Why Choose RideNow?</h2>
+          <h2 className="text-4xl font-bold tracking-tight text-[var(--secondary)] mb-4">Why Choose RideNow?</h2>
           <p className="text-gray-600 max-w-xl mx-auto text-lg">We bring the best-in-class travel experience to your doorstep with unmatched reliability.</p>
         </div>
 
@@ -121,7 +121,7 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)]"></div>
 
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[var(--secondary)] mb-4">How It Works</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[var(--secondary)] mb-4">How It Works</h2>
             <p className="text-gray-600">Three simple steps to start your journey.</p>
           </div>
 
@@ -152,7 +152,7 @@ export default function Home() {
       {/* Testimonials */}
       <section id="testimonials" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-[var(--secondary)] mb-4">Loved by Bhopal</h2>
+          <h2 className="text-4xl font-bold tracking-tight text-[var(--secondary)] mb-4">Loved by Bhopal</h2>
           <p className="text-gray-600 max-w-xl mx-auto text-lg">Don't just take our word for it. Here's what our daily riders have to say.</p>
         </div>
 
@@ -187,7 +187,7 @@ export default function Home() {
           <div className="clay-icon-primary w-20 h-20 mb-8">
             <CarFront size={36} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[var(--secondary)] mb-6">Ready to Hit the Road?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--secondary)] mb-6">Ready to Hit the Road?</h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-10">
             Join thousands of riders in Bhopal who have upgraded their daily commute. Download the RideNow app today and get 50% off your first ride!
           </p>

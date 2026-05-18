@@ -10,20 +10,20 @@
   --accent: #38bdf8; /* Light blue accent */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-hover: var(--primary-hover);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-}
-
 body {
   background-color: var(--background) !important;
   color: var(--foreground) !important;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-sora), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.font-sora, .clay-btn-primary, .clay-btn-secondary {
+  font-family: var(--font-sora), ui-sans-serif, system-ui, sans-serif !important;
 }
 
 /* Claymorphism Utility Classes */
@@ -57,7 +57,7 @@ body {
     inset 2px 2px 5px rgba(255, 255, 255, 0.5),
     inset -2px -2px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 .clay-btn-primary:hover {
   background: var(--primary-hover);
@@ -79,7 +79,7 @@ body {
     inset 2px 2px 5px rgba(255, 255, 255, 1),
     inset -2px -2px 5px rgba(166, 180, 200, 0.2);
   transition: all 0.3s ease;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 .clay-btn-secondary:hover {
   transform: translateY(-2px);
